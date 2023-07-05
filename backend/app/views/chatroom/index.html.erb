@@ -1,0 +1,10 @@
+<h1>Simple Chatroom</h1>
+
+<div id="chat-records">
+</div>
+
+<%= form_with(url: '/chatroom/speak', method: :post, remote: true) do |form| %>
+    <label>Say: </label>
+    <%= form.text_field :speak_content %>
+    <%= form.submit :Send %>
+<% end %>
